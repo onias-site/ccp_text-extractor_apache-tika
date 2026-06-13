@@ -21,6 +21,11 @@ import com.ccp.especifications.text.extractor.CcpTextExtractor;
 import java.io.ByteArrayOutputStream;
 import org.apache.tika.metadata.Metadata;
 
+/**
+ * Implementação de {@code CcpTextExtractor} usando o Apache Tika com detecção automática de
+ * formato. Recebe o conteúdo codificado em Base64, decodifica e extrai o texto puro via
+ * {@code BodyContentHandler}.
+ */
 class ApacheTikaTextExtractor implements CcpTextExtractor {
 
 	public String extractText(String content) {
